@@ -1,0 +1,58 @@
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <div class="popup-title-position">
+    
+    </div>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</ng-template>
+<div class="header bg-gradient-success pt-md-7"></div>
+
+<style>
+  div.scrollmenu {
+background-color: #260b6b;
+overflow: auto;
+white-space: nowrap;
+}
+
+div.scrollmenu a {
+display: inline-block;
+color: white;
+padding: 20px;
+text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+background-color: #0caf63;
+}
+</style>
+<body>
+
+<div class="scrollmenu">
+<b><a [routerLink]="['/remot']">Add Remote</a></b>
+<b><a [routerLink]="['/remote']">Manage Remote</a> </b></div>
+<br>
+<br>
+  
+
+
+
+<table>
+  
+  <thead>
+    
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table>
+
+
+

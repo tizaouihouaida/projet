@@ -1,0 +1,32 @@
+<div class="header bg-gradient-success pt-md-7"></div>
+
+<br />
+<br />
+
+<div class="center-block" *ngIf="isLoading">
+  <div class="lds-dual-ring"></div>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger alert-style font-family-lato" role="alert">
+    {{ errorMessage }}
+  </div>
+
+<div class="form-position" *ngIf="!isLoading">
+  <form [formGroup]="departementForm">
+    <div class="mb-3">
+      <label for="name" class="form-label font-family-lato">Departement Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="enter Departement Name"
+        formControlName="name"
+      />
+      <div *ngIf="departementForm.get('name').invalid &&(departementForm.get('name').touched || isSubmit)" class="error-text font-family-lato">
+        departement name is required
+      </div>
+    </div>
+    
+    <center><button (click)="saveDepartement()" type="submit" class="btn btn-primary font-family-lato">Submit</button></center>
+  </form>
+</div>
